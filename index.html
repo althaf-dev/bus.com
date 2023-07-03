@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUS.COM</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/7d74ce6fe0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./index.css">
+
+</head>
+
+
+
+
+<body class="vh-100 m-0 p-0">
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade modalbg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-fullscreen-lg-down">
+
+            <div class="modal-content">
+
+
+
+                <div class="modal-body p-1">
+                    <div class="container-fluid">
+                        <div class="row p-0 d-flex flex-lg-row flex-column">
+
+                            <div class="col-lg-6 col-12 m-0 p-0 bg-danger bg-gradient ">
+                                <div class="col-12 d-flex d-lg-none justify-content-end align-items-center">
+                                    <button type="button" class="btn btn-close " data-bs-dismiss="modal"></button>
+                                </div>
+                                <img class="img-fluid  d-lg-flex d-none" src="./desktop-payment-offers.svg" alt="svg"
+                                    width="349" height="515">
+                                <img class=" img-fluid d-lg-none d-flex " src="./moblogin_top.bmp" alt="svg" width="349"
+                                    height="215">
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="row ">
+                                    <div class="col-12 d-lg-flex d-none justify-content-end align-items-center">
+                                        <button type="button" class="btn btn-close " data-bs-dismiss="modal"></button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-10 col-12">
+                                        <p class="text-danger text-center mt-5"><strong>
+                                                Sign in to avail exciting discounts and cashbacks!!
+                                            </strong> </p>
+                                    </div>
+                                    <div class="col-2">
+
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col">
+                                        <div class="input-group">
+                                            <select name="country_code" class="p-0 m-0  codetext" id="">
+                                                <option value="91">+91 india</option>
+                                                <option data-countryCode="AD" value="376">Andorra (+376)</option>
+                                                <option data-countryCode="AO" value="244">Angola (+244)</option>
+                                                <option data-countryCode="AI" value="1264">Anguilla (+1264)</option>
+                                            </select>
+                                            <input type="text" id="mob" class="form-control"
+                                                placeholder="Enter Your Mobile Number">
+
+                                        </div>
+                                        <span id="formvalid" class="text-danger"></span>
+
+
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col">
+                                        <div id="capcha">
+                                            <input type="checkbox" class="fs-1" name="checkbox" id="check">
+                                            <label for="checkbox">I'am not robot</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+
+                                        <button type="button" id="genotp"
+                                            class="btn btn-danger form-control mt-lg-5 mt-2">GENERATE OTP (One Time
+                                            Password)</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div>
+                                            <p class="bg-success bg-gradient p-2">To continue please enter OTP sent to
+                                                verify number</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h6>MOBILE NUMBER</h6>
+                                    </div>
+                                </div>
+
+                                <div class="row ">
+                                    <div class="col-6 ">
+                                        <small>123456789</small>
+                                    </div>
+                                    <div class="col-6 d-flex justify-content-end">
+                                        <span class="text-primary">CHANGE</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12">
+
+                                        <form action="">
+                                            <input type="text" class="form-control mt-4" placeholder="Enter OTP">
+                                            <button type="submit" class="form-control mt-4 btn btn-danger">VERIFY
+                                                OTP</button>
+                                        </form>
+
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <span class="mt-4 text-primary">RESEND OTP</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+    </div>
+    <header class="m-0 p-0 ">
+        <div class="h-25">
+
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-xl-8 col-2 mt-0">
+                        <div class="d-lg-flex flex-lg-grow-2 ms-lg-5">
+
+                            <div class="flex-lg-grow-0  d-flex align-items-center">
+                                <a class="navbar-brand me-5" href="">bus.com</a>
+
+                            </div>
+
+                            <div class="d-lg-flex flex-lg-row flex-lg-grow-1 d-none justify-content-start ms-5 ">
+                                <nav class="navbar">
+                                    <ul class="navbar-nav d-flex flex-row justify-content-evenly">
+                                        <li class="nav-item ms-5 me-4"><a class="nav-link" href="">
+                                                <div
+                                                    class="text-black d-flex flex-column align-items-center p-2  highlight">
+                                                    <i class="fa-solid fa-bus"></i><strong>Bus Tickets</strong>
+                                                </div>
+                                            </a></li>
+                                        <li class="nav-item ms-5 me-4"><a class="nav-link " href="">
+                                                <div
+                                                    class="text-black d-flex flex-column align-items-center p-2 highlight">
+                                                    <i class="fa-solid fa-taxi"></i><strong>Cab Rental</strong>
+                                                </div>
+                                            </a></li>
+                                        <li class="nav-item ms-5 me-4"><a class="nav-link " href="">
+                                                <div
+                                                    class="text-black d-flex flex-column align-items-center p-2 highlight">
+                                                    <i class="fa-solid fa-train-subway"></i><strong>Train
+                                                        Tickets</strong>
+                                                </div>
+                                            </a></li>
+
+
+                                    </ul>
+                                </nav>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-12 p-0 mt-2">
+                        <nav class="navbar navbar-expand-lg  m-0 p-0 navbg">
+
+
+                            <button class="navbar-toggler ms-1" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navmenu"><span class="navbar-toggler-icon"></span></button>
+                            </button>
+
+                            <div class="collapse navbar-collapse justify-content-lg-end ms-1 mt-3 p-0 m-0" id="navmenu">
+                                <ul class="navbar-nav m-0 p-0">
+                                    <li class="nav-item "><a class="nav-link" href="">Help</a></li>
+                                    <li class="nav-item me-lg-5 ms-lg-5">
+                                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button"
+                                            href="">Account
+                                            <div class="dropdown-menu dropdown-menu-end rounded-4">
+                                                <ul
+                                                    class="d-flex flex-column justify-content-start align-items-center  m-0 p-0">
+                                                    <li class="dropdown-item mt-2 pt-2 pb-2"><small>Cancel
+                                                            Ticket</small></li>
+                                                    <li class="dropdown-item mt-2 pt-2 pb-2"><small> Change travel date
+                                                        </small></li>
+                                                    <li class="dropdown-item mt-2 pt-2 pb-2"><small>Show My Ticket
+                                                        </small></li>
+                                                    <li class="dropdown-item mt-2 pt-2 pb-2"><small> Email/SMS </small>
+                                                    </li>
+                                                    <li class="dropdown-item mt-2 pt-2 pb-2" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal"><small> Login/Signup </small>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+
+
+
+
+                                    </li>
+                                    <li class="nav-item me-lg-5 ms-lg-5 d-lg-none"><a class="nav-link" href="">Ticket
+                                            Booking</a></li>
+                                    <li class="nav-item me-lg-5 ms-lg-5 d-lg-none"><a class="nav-link" href="">Ticket
+                                            Reshedule</a></li>
+                                    <li class="nav-item me-lg-5 ms-lg-5 d-lg-none"><a class="nav-link" href="">Ticket
+                                            cancel</a></li>
+                                    <li class="nav-item me-lg-5 ms-lg-5 d-lg-none"><a class="nav-link"
+                                            href="">Offers</a></li>
+                                    <li class="nav-item me-lg-5 ms-lg-5 d-lg-none"><a class="nav-link" href="">Refer &
+                                            Earn</a></li>
+                                    <li class="nav-item me-lg-5 ms-lg-5 d-lg-none"><a class="nav-link" href="">Get
+                                            Ticket Details</a></li>
+
+
+                                </ul>
+                            </div>
+                        </nav>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </header>
+
+    <main class="h-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <section>
+                        <div class="d-lg-none bg-danger p-4 fs-6 border border-5 border-dark">
+                            <ul class="navbar-nav d-flex flex-row justify-content-evenly">
+                                <li class="nav-item ms-5 me-4"><a class="nav-link" href="">
+                                        <div
+                                            class="text-black d-flex flex-column align-items-center p-2 justify-content-center highlight">
+                                            <i class="fa-solid fa-bus"></i><small>Bus Tickets</small>
+                                        </div>
+                                    </a></li>
+                                <li class="nav-item ms-5 me-4"><a class="nav-link " href="">
+                                        <div
+                                            class="text-black d-flex flex-column align-items-center justify-content-center p-2 highlight">
+                                            <i class="fa-solid fa-taxi"></i><small>Cab Rental</small>
+                                        </div>
+                                    </a></li>
+                                <li class="nav-item ms-5 me-4"><a class="nav-link " href="">
+                                        <div
+                                            class="text-black d-flex flex-column align-items-center justify-content-center p-2 highlight">
+                                            <i class="fa-solid fa-train-subway"></i><small>Train Tickets</small>
+                                        </div>
+                                    </a></li>
+
+
+                            </ul>
+
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <h2 class="ms-4 mt-2 mb-0 d-lg-none">India's No Bus booking site</h2>
+        <div class="h-50">
+            <div class="container-fluid hero h-75 d-flex align-items-center justify-content-center">
+                <div class="row d-lg-flex">
+                    <div class="col-lg-10 col-12  p-lg-0 m-lg-0 ">
+
+                        <form action="" class="">
+                            <div class="input-group">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-3 mt-1">
+                                            <input type="text" aria-label="First name"
+                                                class="form-control fs-3 p-2 placeholder-wave  rounded-lg-5 rounded-end font-monospace"
+                                                placeholder="From">
+                                        </div>
+                                        <div class="col-12 col-lg-3 mt-1">
+                                            <input type="text" aria-label="Last name"
+                                                class="form-control fs-3 p-2 placeholder-wave font-monospace"
+                                                placeholder="To">
+                                        </div>
+
+                                        <div class="col-12 col-lg-3 mt-1">
+                                            <input type="date" aria-label="Last name"
+                                                class="form-control fs-3 p-2 placeholder-wave font-monospace"
+                                                placeholder="Date">
+                                        </div>
+                                        <div class="col-12 col-lg-3 mt-1">
+                                            <button
+                                                class="btn btn-primary form-control fs-3 p-2 rounded-lg-5 rounded-start font-monospace">Serach</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!-- offers section  -->
+
+
+        <div class="container  d-none d-lg-block">
+            <div class="row">
+                <div class="col">
+                    <h1>TRENDING OFFERS</h1>
+                </div>
+            </div>
+
+            <div class="row  border border-5 d-flex align-items-center">
+
+                <div class="col-lg-3 col-12 mt-2 text-white">
+                    <div class="card  cardbackgroundred  ms-1  rounded-4">
+                        <div class="row ms-2">
+                            <div class="col-lg-4 d-flex align-items-center justify-content-center ">
+
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <img class="rounded-circle" src="./tile-80X80.png" alt="tile" width="80px"
+                                        height="80px">
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+
+                                <div class="card-body d-flex flex-column justify-content-center">
+                                    <div class="card-title d-flex justify-content-center  bg-gradient rounded-4">
+                                        <span>BUS</span>
+                                    </div>
+                                    <div class="card-text mt-1">
+                                        <strong>Save up to Rs 250 on bus tickets</strong>
+
+                                    </div>
+                                    <div class="card-text mt-2">
+                                        <small>Valid till 30 june</small>
+
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-6">
+                                            <div class="border-dashed d-flex justify-content-center">
+                                                <small>FIRST</small>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M20 9H11C9.89543 9 9 9.89543 9 11V20C9 21.1046 9.89543 22 11 22H20C21.1046 22 22 21.1046 22 20V11C22 9.89543 21.1046 9 20 9Z"
+                                                    stroke="white" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M5 15H4C3.46957 15 2.96086 14.7893 2.58579 14.4142C2.21071 14.0391 2 13.5304 2 13V4C2 3.46957 2.21071 2.96086 2.58579 2.58579C2.96086 2.21071 3.46957 2 4 2H13C13.5304 2 14.0391 2.21071 14.4142 2.58579C14.7893 2.96086 15 3.46957 15 4V5"
+                                                    stroke="white" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-3 col-12 mt-2 text-white">
+                    <div class="card  cardbackgroundblue  ms-1  rounded-4">
+                        <div class="row ms-2">
+                            <div class="col-lg-4 d-flex align-items-center justify-content-center ">
+
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <img class="rounded-circle" src="./2_1.png" alt="tile" width="80px" height="80px">
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+
+                                <div class="card-body d-flex flex-column justify-content-center">
+                                    <div class="card-title d-flex justify-content-center  bg-gradient rounded-4">
+                                        <span>BUS</span>
+                                    </div>
+                                    <div class="card-text mt-1">
+                                        <strong>Save up to Rs 250 on bus tickets</strong>
+
+                                    </div>
+                                    <div class="card-text mt-2">
+                                        <small>Valid till 30 june</small>
+
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-6">
+                                            <div class="border-dashed d-flex justify-content-center">
+                                                <small>FIRST</small>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M20 9H11C9.89543 9 9 9.89543 9 11V20C9 21.1046 9.89543 22 11 22H20C21.1046 22 22 21.1046 22 20V11C22 9.89543 21.1046 9 20 9Z"
+                                                    stroke="white" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M5 15H4C3.46957 15 2.96086 14.7893 2.58579 14.4142C2.21071 14.0391 2 13.5304 2 13V4C2 3.46957 2.21071 2.96086 2.58579 2.58579C2.96086 2.21071 3.46957 2 4 2H13C13.5304 2 14.0391 2.21071 14.4142 2.58579C14.7893 2.96086 15 3.46957 15 4V5"
+                                                    stroke="white" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-lg-3 col-12 mt-2 text-white">
+                    <div class="card  cardbackgroundgreen  ms-1  rounded-4">
+                        <div class="row ms-2">
+                            <div class="col-lg-4 d-flex align-items-center justify-content-center ">
+
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <img class="rounded-circle" src="./80x80.png" alt="tile" width="80px" height="80px">
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+
+                                <div class="card-body d-flex flex-column justify-content-center">
+                                    <div class="card-title d-flex justify-content-center  bg-gradient rounded-4">
+                                        <span>BUS</span>
+                                    </div>
+                                    <div class="card-text mt-1">
+                                        <strong>Save up to Rs 250 on bus tickets</strong>
+
+                                    </div>
+                                    <div class="card-text mt-2">
+                                        <small>Valid till 30 june</small>
+
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-6">
+                                            <div class="border-dashed d-flex justify-content-center">
+                                                <small>FIRST</small>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M20 9H11C9.89543 9 9 9.89543 9 11V20C9 21.1046 9.89543 22 11 22H20C21.1046 22 22 21.1046 22 20V11C22 9.89543 21.1046 9 20 9Z"
+                                                    stroke="white" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M5 15H4C3.46957 15 2.96086 14.7893 2.58579 14.4142C2.21071 14.0391 2 13.5304 2 13V4C2 3.46957 2.21071 2.96086 2.58579 2.58579C2.96086 2.21071 3.46957 2 4 2H13C13.5304 2 14.0391 2.21071 14.4142 2.58579C14.7893 2.96086 15 3.46957 15 4V5"
+                                                    stroke="white" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-12 mt-2 text-white">
+                    <div class="card  cardbackgroundorange  ms-1  rounded-4">
+                        <div class="row ms-2">
+                            <div class="col-lg-4 d-flex align-items-center justify-content-center ">
+
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <img class="rounded-circle" src="./tile-80X80.png" alt="tile" width="80px"
+                                        height="80px">
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+
+                                <div class="card-body d-flex flex-column justify-content-center">
+                                    <div class="card-title d-flex justify-content-center  bg-gradient rounded-4">
+                                        <span>BUS</span>
+                                    </div>
+                                    <div class="card-text mt-1">
+                                        <strong>Save up to Rs 250 on bus tickets</strong>
+
+                                    </div>
+                                    <div class="card-text mt-2">
+                                        <small>Valid till 30 june</small>
+
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-6">
+                                            <div class="border-dashed d-flex justify-content-center">
+                                                <small>FIRST</small>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M20 9H11C9.89543 9 9 9.89543 9 11V20C9 21.1046 9.89543 22 11 22H20C21.1046 22 22 21.1046 22 20V11C22 9.89543 21.1046 9 20 9Z"
+                                                    stroke="white" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M5 15H4C3.46957 15 2.96086 14.7893 2.58579 14.4142C2.21071 14.0391 2 13.5304 2 13V4C2 3.46957 2.21071 2.96086 2.58579 2.58579C2.96086 2.21071 3.46957 2 4 2H13C13.5304 2 14.0391 2.21071 14.4142 2.58579C14.7893 2.96086 15 3.46957 15 4V5"
+                                                    stroke="white" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+
+        <!-- offers section end -->
+
+
+        <!-- offer section mobile -->
+
+        <div id="carouselExampleControls" class="carousel slide d-lg-none mt-3 text-white" data-bs-ride="carousel">
+
+            <strong class="ms-4 mt-5">OFFERS</strong>
+            <div class="ps-4 mt-2">
+                <button class="btn btn-light border border-2 rounded-5" type="button"
+                    data-bs-target="#carouselExampleControls" data-bs-slide-to="0">BUS</button>
+                <button class="btn btn-light  border border-2 rounded-5" type="button"
+                    data-bs-target="#carouselExampleControls" data-bs-slide-to="2">CAB</button>
+                <button class="btn btn-light border border-2 rounded-5" type="button"
+                    data-bs-target="#carouselExampleControls" data-bs-slide-to="2">TRAIN</button>
+            </div>
+
+            <div class="carousel-inner p-3">
+
+                <div class="carousel-item active">
+                    <div class="card  cardbackgroundred  ms-1  rounded-4">
+                        <div class="row ms-2">
+                            <div class="col-4 d-flex align-items-center justify-content-center ">
+
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <img class="rounded-circle" src="./tile-80X80.png" alt="tile" width="80px"
+                                        height="80px">
+                                </div>
+                            </div>
+                            <div class="col-8">
+
+                                <div class="card-body d-flex flex-column justify-content-center">
+                                    <div class="card-title d-flex justify-content-center  bg-gradient rounded-4">
+                                        <span>BUS</span>
+                                    </div>
+                                    <div class="card-text mt-1">
+                                        <strong>Save up to Rs 250 on bus tickets</strong>
+
+                                    </div>
+                                    <div class="card-text mt-2">
+                                        <small>Valid till 30 june</small>
+
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-6">
+                                            <div class="border-dashed d-flex justify-content-center">
+                                                <small>FIRST</small>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M20 9H11C9.89543 9 9 9.89543 9 11V20C9 21.1046 9.89543 22 11 22H20C21.1046 22 22 21.1046 22 20V11C22 9.89543 21.1046 9 20 9Z"
+                                                    stroke="white" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M5 15H4C3.46957 15 2.96086 14.7893 2.58579 14.4142C2.21071 14.0391 2 13.5304 2 13V4C2 3.46957 2.21071 2.96086 2.58579 2.58579C2.96086 2.21071 3.46957 2 4 2H13C13.5304 2 14.0391 2.21071 14.4142 2.58579C14.7893 2.96086 15 3.46957 15 4V5"
+                                                    stroke="white" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <div class="carousel-item">
+                    <div class="card  cardbackgroundblue  ms-1  rounded-4 ">
+                        <div class="row ms-2">
+                            <div class="col-4 d-flex align-items-center justify-content-center ">
+
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <img class="rounded-circle" src="./2_1.png" alt="tile" width="80px" height="80px">
+                                </div>
+                            </div>
+                            <div class="col-8">
+
+                                <div class="card-body d-flex flex-column justify-content-center">
+                                    <div class="card-title d-flex justify-content-center  bg-gradient rounded-4">
+                                        <span>BUS</span>
+                                    </div>
+                                    <div class="card-text mt-1">
+                                        <strong>Save up to Rs 250 on bus tickets</strong>
+
+                                    </div>
+                                    <div class="card-text mt-2">
+                                        <small>Valid till 30 june</small>
+
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-6">
+                                            <div class="border-dashed d-flex justify-content-center">
+                                                <small>FIRST</small>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M20 9H11C9.89543 9 9 9.89543 9 11V20C9 21.1046 9.89543 22 11 22H20C21.1046 22 22 21.1046 22 20V11C22 9.89543 21.1046 9 20 9Z"
+                                                    stroke="white" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M5 15H4C3.46957 15 2.96086 14.7893 2.58579 14.4142C2.21071 14.0391 2 13.5304 2 13V4C2 3.46957 2.21071 2.96086 2.58579 2.58579C2.96086 2.21071 3.46957 2 4 2H13C13.5304 2 14.0391 2.21071 14.4142 2.58579C14.7893 2.96086 15 3.46957 15 4V5"
+                                                    stroke="white" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+
+
+
+                    <div class="card  cardbackgroundorange  ms-1  rounded-4">
+                        <div class="row ms-2">
+                            <div class="col-4 d-flex align-items-center justify-content-center ">
+
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <img class="rounded-circle" src="./tile-80X80.png" alt="tile" width="80px"
+                                        height="80px">
+                                </div>
+                            </div>
+                            <div class="col-8">
+
+                                <div class="card-body d-flex flex-column justify-content-center">
+                                    <div class="card-title d-flex justify-content-center  bg-gradient rounded-4">
+                                        <span>BUS</span>
+                                    </div>
+                                    <div class="card-text mt-1">
+                                        <strong>Save up to Rs 250 on bus tickets</strong>
+
+                                    </div>
+                                    <div class="card-text mt-2">
+                                        <small>Valid till 30 june</small>
+
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-6">
+                                            <div class="border-dashed d-flex justify-content-center">
+                                                <small>FIRST</small>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M20 9H11C9.89543 9 9 9.89543 9 11V20C9 21.1046 9.89543 22 11 22H20C21.1046 22 22 21.1046 22 20V11C22 9.89543 21.1046 9 20 9Z"
+                                                    stroke="white" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M5 15H4C3.46957 15 2.96086 14.7893 2.58579 14.4142C2.21071 14.0391 2 13.5304 2 13V4C2 3.46957 2.21071 2.96086 2.58579 2.58579C2.96086 2.21071 3.46957 2 4 2H13C13.5304 2 14.0391 2.21071 14.4142 2.58579C14.7893 2.96086 15 3.46957 15 4V5"
+                                                    stroke="white" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div> <!-- careousel inner close-->
+
+
+
+        </div>
+
+
+
+
+    </main>
+
+    <!-- about us -->
+
+    <section class="aboutus mb-5">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-6 col-12">
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h1>NOW, GET MORE THAN JUST BUS TICKETS WITH REDBUS!</h1>
+                        </div>
+                    </div>
+
+                    <div class="row mt-5 gx-0 m-0 ">
+                        <div class="col-6  d-flex justify-content-start">
+                            <button class="btn btn-light border border-1 ps-5 pe-5  ">Cab/Bus Rental</button>
+                        </div>
+
+                        <div class="col-6 d-flex justify-content-start">
+                            <button class="btn btn-light ps-5 pe-5 border border-1">Train Tickets</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container animrental ">
+            <div class="row mt-5 ">
+
+                <div class="col-12  d-flex justify-content-start ">
+                    <p>Rent Cabs, Tempo Travellers & Buses with best drivers</p>
+                </div>
+
+            </div>
+            <div class="row mt-4 ">
+                <div class="col-lg-1 col-6">
+                    <img src="./images/ryde_car.svg" alt="cab">
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <strong>Outstation</strong>
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col-lg-1 col-6">
+                    <img src="./images/ryde_car_hourly.svg" alt="cab">
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <strong>Hourly Rental</strong>
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col-lg-1 col-6">
+                    <img src="./images/ryde_airport_transport.svg" alt="cab">
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <strong>Airport Transfers</strong>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+        <div class="container animticket">
+            <div class="row mt-5">
+
+                <div class="col-12 d-flex justify-content-start">
+                    <p>Book IRCTC Train Tickets on redRail simple & superfast booking</p><br>
+
+
+                </div>
+                <div class="row mt-4">
+                    <div class="col-lg-1 col-3">
+                        <img src="./images/railAuthorized.svg" alt="cab">
+                    </div>
+
+                    <div class="col-lg-3 col-9">
+                        <strong>Authorised IRCTC Partner</strong>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-lg-1 col-3">
+                        <img src="./images/railHasslefree.svg" alt="cab">
+                    </div>
+
+                    <div class="col-lg-3 col-9">
+                        <strong>Instant refunds on UPI payments</strong>
+                    </div>
+                </div>
+
+                <div class="row mt-4 mb-4">
+                    <div class="col-lg-1 col-3">
+                        <img src="./images/railrefunds.svg" alt="cab">
+                    </div>
+
+                    <div class="col-lg-3 col-9">
+                        <strong>Hassle- free customer support</strong>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+    </section>
+
+
+    <!-- Get Mobile App -->
+
+    <section>
+        <div class="container bg-danger bg-gradient rounded-5 ps-5 pt-3 pb-5 mt-5 mb-4">
+
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-white">ENJOY THE APP</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-12">
+
+
+                    <div class="row mt-3 bg-white border border-1 rounded-4 p-4">
+
+                        <div class="col">
+                            <div class="row">
+
+                                <div class="col-12"><i
+                                        class="fa fa-check text-white bg-success me-2 rounded-circle p-2"></i>Quick
+                                    access</div>
+                                <div class="col-12 mt-4"><i
+                                        class="fa fa-check text-white bg-success me-2 rounded-circle p-2"></i>Superior
+                                    live tracking</div>
+                            </div>
+
+                            <div class="row mt-4">
+
+                                <div class="col-6">
+
+                                    <div class="row">
+                                        <div class="col-12"> <strong class="fw-bolder fs-4">4.5</strong><i
+                                                class="fa-solid fa-star fs-5 ms-2"></i></div>
+                                        <div class="col-12">
+                                            <p>50M+ downloads</p>
+                                        </div>
+                                        <div class="col-12"> <strong>Play Store</strong></div>
+
+
+                                    </div>
+                                </div>
+
+
+                                <div class="col-6">
+
+                                    <div class="row">
+                                        <div class="col-12"> <strong class="fw-bolder fs-4">4.5</strong><i
+                                                class="fa-solid fa-star fs-5 ms-2"></i></div>
+                                        <div class="col-12">
+                                            <p>50M+ downloads</p>
+                                        </div>
+                                        <div class="col-12"> <strong>App Store</strong></div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-4 col-12  ms-5">
+
+                    <!-- first row -->
+
+                    <div class="row mt-2">
+                        <div class="col-12 mb-2">
+                            <strong class="text-white">Get Download link on</strong>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-9">
+                            <div class="input-group">
+                                <input type="text" class="form-control fs-6 p-3" placeholder="WhatsApp number">
+                                <button class="btn btn-dark text-white">Get Link</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- second row -->
+
+                    <div class="row mt-2">
+                        
+                        <div class="col-4">
+                            <div class="text-white">
+                                <strong>Scan to download</strong>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="text-white">
+                                <strong>Download the App on</strong>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- third row -->
+
+                    <div class="row mt-3">
+                        <div class="col-4">
+                            <div>
+                                <img src="./images/qrCode.svg" alt="qrcode">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="./images/playStore.svg" alt="playstore">
+
+                                </div>
+
+                                <div class="col-12 mt-3">
+                                    <img src="./images/appStore.svg" alt="appStore">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+
+                </div>
+                <!-- Main row last column-image -->
+
+                <div class="col-3">
+
+                    <img src="./images/travlebag.bmp" alt="travlebag" width="280px" height="280px">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section>
+        <div class="container">
+            <div class="row p-0">
+
+                <div class="col-12 mb-3">
+                    <h1>FREQUENTLY ASKED QUESTIONS</h1>
+                </div>
+            </div>
+
+            <div class="row  border-bottom m-lg-2 m-0 p-0">
+                <div class="col-12 d-flex flex-wrap fs-6 justify-content-evenly mb-3 faq_tabs position-relative  p-0">
+                    <div class="fs-6">General</div>
+                    <div>Ticket</div>
+                    <div>Pay</div>
+                    <div>Cancell</div>
+                    <div>Refund</div>
+                    <div class="line"></div>
+
+                </div>
+            </div>
+
+            <div class="faq"></div>
+            <div class="faq"></div>
+            <div class="faq"></div>
+            <div class="faq"></div>
+            <div class="faq"></div>
+            <div class="faq"></div>
+
+
+            
+
+
+
+
+            
+        </div>
+
+       
+    </section>
+
+    <!-- footer link section -->
+
+    <section >
+        <div class="container">
+            <div class="row mt-4 ms-1 p-3 d-flex flex-row justify-content-evenly bg_footer">
+                <div class="col-lg-2 col-12">
+
+                    <div class="d-flex flex-column">
+                        <h5 class="fw-bold">Top RTCs</h5>
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link p-1" clhref=""><small>APSRTC</small></a></li>
+                            <li class="nav-item"><a class="nav-link p-1" clhref=""><small>GSRTC</small></a></li>
+                            <li class="nav-item"><a class="nav-link p-1" clhref=""><small>MSRTC</small></a></li>
+                            <li class="nav-item"><a class="nav-link p-1" clhref=""><small>TNSTC</small></a></li>
+                            <li class="nav-item"><a class="nav-link p-1" clhref=""><small>View All</small></a></li>
+                        </ul>
+                        
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-2 col-12">
+
+                    <div class="d-flex flex-column">
+                        <h5 class="fw-bold">Other</h5>
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link p-1" clhref=""><small>TSRTC</small></a></li>
+                            <li class="nav-item"><a class="nav-link p-1" clhref=""><small>SBSTC</small></a></li>
+                            <li class="nav-item"><a class="nav-link p-1" clhref=""><small>RSRTC</small></a></li>
+                            <li class="nav-item"><a class="nav-link p-1" clhref=""><small>KSRTC</small></a></li>
+                            <li class="nav-item"><a class="nav-link p-1" clhref=""><small>View All</small></a></li>
+                        </ul>
+                        
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-2 col-12">
+
+                    <div class="d-flex flex-column">
+                        <h5 class="fw-bold">Top bus routes</h5>
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link p-1" clhref=""><small>Hyderabad to Bangalore Bus</small></a></li>
+                            <li class="nav-item"><a class="nav-link p-1" clhref=""><small>Bangalore to Chennai Bus</small></a></li>
+                            <li class="nav-item"><a class="nav-link p-1" clhref=""><small>Pune to Bangalore Bus</small></a></li>
+                            <li class="nav-item"><a class="nav-link p-1" clhref=""><small>Mumbai to Bangalore Bus</small></a></li>
+                            <li class="nav-item"><a class="nav-link p-1" clhref=""><small>View All</small></a></li>
+                        </ul>
+                        
+
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-2 col-12">
+
+                    <div class="d-flex flex-column">
+                        <h5 class="fw-bold">Top cities</h5>
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link p-1" clhref=""><small>Hyderabad Bus Tickets</small></a></li>
+                            <li class="nav-item"><a class="nav-link p-1" clhref=""><small>Bangalore Bus Tickets</small></a></li>
+                            <li class="nav-item"><a class="nav-link p-1" clhref=""><small>Chennai Bus Tickets</small></a></li>
+                            <li class="nav-item"><a class="nav-link p-1" clhref=""><small>Pune Bus Tickets</small></a></li>
+                            <li class="nav-item"><a class="nav-link p-1" clhref=""><small>View All</small></a></li>
+                        </ul>
+                        
+
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-12">
+
+                    <div class="d-flex flex-column">
+                        <h5 class="fw-bold">Tempo Traveller in Cities</h5>
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link p-1" clhref=""><small>Tempo traveller in Bangalore</small></a></li>
+                            <li class="nav-item"><a class="nav-link p-1" clhref=""><small>Tempo traveller in Chennai</small></a></li>
+                            <li class="nav-item"><a class="nav-link p-1" clhref=""><small>Tempo traveller in Mumbai</small></a></li>
+                            <li class="nav-item"><a class="nav-link p-1" clhref=""><small>Tempo traveller in Hyderabad</small></a></li>
+                            <li class="nav-item"><a class="nav-link p-1" clhref=""><small>Tempo traveller in Ahmedabad</small></a></li>
+                        </ul>
+                        
+
+
+                    </div>
+
+                </div>
+
+
+                
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p>
+                        2023 bus.com India Pvt Ltd. All rights reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+
+    <script src="./jquery.js"></script>
+    <script src="./index.js"></script>
+    <script src = "./faq.js"></script>
+</body>
+
+</html>

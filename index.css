@@ -1,0 +1,143 @@
+.cardbackgroundred{
+    background-image: linear-gradient(to right,hsla(0, 100%, 50%, 0.844),hsla(0, 79%, 45%, 0.614));
+}
+.cardbackgroundblue{
+    background-image: linear-gradient(to right,rgba(25, 8, 208, 0.719),hsla(215, 85%, 49%, 0.429));
+}
+.cardbackgroundgreen{
+    
+    background-image: linear-gradient(to right,rgba(8, 208, 28, 0.719),hsla(174, 84%, 48%, 0.971));
+
+}
+.cardbackgroundorange{
+    
+    background-image: linear-gradient(to right,rgba(216, 219, 21, 0.719),hsla(32, 85%, 49%, 0.905));
+
+}
+.border-dashed{
+    border: 1px dashed white;
+    border-radius:4px;
+}
+.highlight:hover,
+.highlight:focus {
+    background-color: hsla(0, 0%, 55%, 0.196);
+    border-radius: 10px;
+    transition: all 0.5s;
+
+}
+
+.highlight:hover i {
+    color: red;
+    transition: all 1s;
+}
+
+header {
+    height: 6rem;
+}
+
+.navbg {
+    background-color: whitesmoke;
+
+    z-index: 1;
+}
+
+.offer_1 {
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+    border-radius: 50%;
+    margin: 20px;
+}
+.modalbg{
+
+    background-color: hsla(0, 0%, 100%, 0.5);
+
+}
+.codetext{
+    font-size: 16px;
+}
+.animrental{
+    transition: all 1s;
+    animation: rentanim 0.5s ease-in-out 0s forwards;
+}
+.animticket{
+    
+    transition: all 1s;
+    animation: ticketanim 0.5s ease-in-out 0s forwards;
+
+}
+
+.line{
+    position: absolute;
+    background-color: rgba(240, 27, 8, 0.512);
+    width: 60px;
+    height: 5px;
+    top:35px;
+    left:160px;
+    transition: all 0.2s ease-in-out;
+}
+.faq_content{
+    display: none;
+
+}
+.faq_content.active{
+
+    display: block;
+}
+.bg_footer{
+    background-color: aliceblue;
+}
+@keyframes rentanim {
+    0%{
+        transform: translateX(-300px);
+    }
+
+  
+    100%{
+
+        transform: translateX(0px);
+    }
+
+
+
+}
+
+
+@keyframes ticketanim {
+    0%{
+        transform: translateX(300px);
+    }
+
+
+    100%{
+
+        transform: translateX(0px);
+    }
+
+
+
+}
+.aboutus{
+    text-align: center;
+}
+@media screen and (min-width:676px) {
+    .hero {
+        background-image: url(./fahad-bin-kamal-anik-GlDRYsruYJ8-unsplash.jpg), linear-gradient(to left, #d92a2a, whitesmoke);
+        background-repeat: no-repeat;
+        box-shadow: 0 0 4px 4px rgb(255, 255, 255) inset;
+
+    }
+
+    .navbg {
+        background-color: none;
+
+    }
+
+    .offer_1 {
+        width: 100px;
+        height: 100px;
+        background-color: greenyellow;
+        border-radius: 50%;
+        margin: 20px;
+    }
+}
